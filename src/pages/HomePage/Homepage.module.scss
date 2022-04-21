@@ -1,10 +1,17 @@
+@import '../../styles//Variables.scss';
+
 .toDoListContainer {
   width: 100%;
-  max-width: 650px;
+  max-width: calc(670px + 2rem);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .toDoListArea {
-  background: red;
+  background: $secondary-color;
+  box-shadow: 0 8px 24px #010409;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 4px;
+  color: $light-color;
+  padding: 1rem;
 }
