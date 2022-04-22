@@ -14,14 +14,19 @@
   input {
     border: 1px solid rgba(240, 246, 252, 0.1);
     background: $primary-color;
-    margin-bottom: 1rem;
     padding: .5rem .75rem;
     font-size: 1rem;
     color: $light-color;
     border-radius: 6px;
   }
 
+  p {
+    font-size: .75rem;
+    margin-top: 4px;
+  }
+
   button {
+    margin-top: 1rem;
     background: $green-color;
   }
 }
