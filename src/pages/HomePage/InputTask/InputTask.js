@@ -6,7 +6,9 @@ const InputTask = () => {
   return (
     <form className={styles.formCreateTask} onSubmit={(e) => e.preventDefault()}>
       <input type="text" placeholder='Escreva uma nova tarefa...' />
-      <Button className={styles.sendNewTask}>Adicionar nova tarefa</Button>
+      <Button className={styles.sendNewTask}>
+        Adicionar nova tarefa
+      </Button>
     </form>
   )
 }

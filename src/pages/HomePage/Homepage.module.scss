@@ -13,5 +13,9 @@
   border: 1px solid rgba(240, 246, 252, 0.1);
   border-radius: 4px;
   color: $light-color;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+
+  h2 {
+    text-align: center;
+  }
 }

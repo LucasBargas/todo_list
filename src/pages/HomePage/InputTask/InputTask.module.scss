@@ -1,6 +1,26 @@
+@import '../../../styles//Variables.scss';
+
 .formCreateTask {
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  margin-top: 1rem;
+  padding: 1.25rem;
+
   input, .sendNewTask {
     display: block;
     width: 100%;
+  }
+
+  input {
+    border: 1px solid rgba(240, 246, 252, 0.1);
+    background: $primary-color;
+    margin-bottom: 1rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    color: $light-color;
+    border-radius: 6px;
+  }
+
+  button {
+    background: $green-color;
   }
 }
