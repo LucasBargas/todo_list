@@ -13,8 +13,6 @@ const InputTask = () => {
     setErrorMsg(false);
   }
 
-  // console.log(listTask)
-
   const handleSubmit = e => {
     e.preventDefault();
     if (task) {
