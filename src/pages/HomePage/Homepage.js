@@ -5,10 +5,6 @@ import InputTask from './InputTask/InputTask';
 const Homepage = () => {
   const [listTask, setListTask] = useState([]);
 
-  if (listTask.length) {
-    console.log(listTask)
-  }
-
   return (
     <section className={styles.toDoListContainer}>
       <div className={styles.toDoListArea}>
