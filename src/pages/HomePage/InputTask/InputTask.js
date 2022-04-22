@@ -2,10 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './InputTask.module.scss';
 import Button from '../../../components/Button/Button';
 
-const InputTask = () => {
+const InputTask = ({ listTask, setListTask }) => {
   const [errorMsg, setErrorMsg] = useState(false);
   const [task, setTask] = useState('');
-  const [listTask, setListTask] = useState([]);
   const input = useRef();
 
   const handleInputChange = ({ target }) => {
@@ -31,8 +30,8 @@ const InputTask = () => {
 
   return (
     <form className={styles.formCreateTask} onSubmit={handleSubmit}>
-      <input 
-        ref={input}
+      <input
+        ref={input} 
         type="text" 
         placeholder='Escreva uma nova tarefa...' 
         value={task}
