@@ -1,8 +1,10 @@
-import React from 'react';
+import DefaultButton from './Button.styles';
 
-const Button = () => {
+const Button = ({ bg, bgHover }) => {
   return (
-    <div>Button</div>
+    <DefaultButton bg={bg} bgHover={bgHover}>
+      Botão
+    </DefaultButton>
   )
 }
 

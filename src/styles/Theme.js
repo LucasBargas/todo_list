@@ -1,4 +1,4 @@
-export const Theme = {
+const Theme = {
   colors: {
     PrimaryColor: '#0d1017',
     SecondaryColor: '#161b21',
@@ -13,3 +13,5 @@ export const Theme = {
     Roboto: 'Roboto, sans-serif'
   }
 }
+
+export default Theme;

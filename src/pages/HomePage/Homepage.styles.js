@@ -12,7 +12,7 @@ export const TodoListArea = styled.div`
     background: ${theme.colors.SecondaryColor};
     border: 1px solid ${theme.colors.BorderColor};
   `}
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 3rem;
   box-shadow: 0 8px 24px #010409;
   border-radius: 6px;
 

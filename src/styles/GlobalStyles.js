@@ -23,6 +23,9 @@ const GlobalStyles = createGlobalStyle`
     button, input {
       outline: none;
       border: none;
+      ${({ theme }) => css`
+      font-family: ${theme.fonts.Roboto};
+    `}
     }
 
     button {
