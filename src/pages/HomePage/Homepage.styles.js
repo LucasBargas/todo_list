@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import * as V from '../../styles/Variables';
+import styled, { css } from "styled-components";
 
 export const TodoListContainer = styled.section`
   width: 100%;
@@ -9,10 +8,12 @@ export const TodoListContainer = styled.section`
 `;
 
 export const TodoListArea = styled.div`
-  background: ${V.SecondaryColor};
+  ${({ theme }) => css`
+    background: ${theme.colors.SecondaryColor};
+    border: 1px solid ${theme.colors.BorderColor};
+  `}
   padding: 1.5rem 2.5rem;
   box-shadow: 0 8px 24px #010409;
-  border: 1px solid ${V.BorderColor};
   border-radius: 6px;
 
   form {

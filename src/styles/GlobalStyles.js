@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-import * as V from './Variables';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -15,9 +14,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${V.PrimaryColor};
-    color: ${V.LightColor};
-    font-family: ${V.Roboto};
+    ${({ theme }) => css`
+      background: ${theme.colors.PrimaryColor};
+      color: ${theme.colors.LightColor};
+      font-family: ${theme.fonts.Roboto};
+    `}
 
     button, input {
       outline: none;
