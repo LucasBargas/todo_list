@@ -15,11 +15,4 @@ export const TodoListArea = styled.div`
   padding: 1.5rem 3rem;
   box-shadow: 0 8px 24px #010409;
   border-radius: 6px;
-
-  form {
-    input, button {
-      display: block;
-      width: 100%;
-    }
-  }
 `;
