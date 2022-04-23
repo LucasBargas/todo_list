@@ -15,4 +15,13 @@ export const TodoListArea = styled.div`
   padding: 1.5rem 3rem;
   box-shadow: 0 8px 24px #010409;
   border-radius: 6px;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    ${({ theme }) => css`
+      color: ${theme.colors.LightColor};
+    `}
+  }
 `;

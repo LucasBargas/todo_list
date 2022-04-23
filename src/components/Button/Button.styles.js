@@ -8,6 +8,8 @@ const DefaultButton = styled.button`
   font-size: .875rem;
   font-weight: 500;
   transition: .2s;
+  border-radius: 4px;
+  box-shadow: transparent 0px 0px, transparent 0px 0px;
   ${({ theme }) => css`
     color: ${theme.colors.LightColor};
   `}

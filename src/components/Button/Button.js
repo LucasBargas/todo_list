@@ -1,9 +1,9 @@
 import DefaultButton from './Button.styles';
 
-const Button = ({ bg, bgHover }) => {
+const Button = ({ bg, bgHover, width, children }) => {
   return (
-    <DefaultButton bg={bg} bgHover={bgHover}>
-      Botão
+    <DefaultButton bg={bg} bgHover={bgHover} width={width}>
+      {children}
     </DefaultButton>
   )
 }
