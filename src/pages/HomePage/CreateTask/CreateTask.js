@@ -37,7 +37,7 @@ const CreateTask = ({ taskList, setTaskList }) => {
           value={task}
           onChange={handleInputChange} 
         />
-        {errorMsg && <p>Você precisa inser uma tarefa.</p>}
+        {errorMsg && <p>Você precisa inserir uma tarefa.</p>}
 
         <Button 
           width='100%' 
