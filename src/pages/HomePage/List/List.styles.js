@@ -21,6 +21,25 @@ export const ButtonsFilter = styled.div`
   padding-top: .75rem;
   display: flex;
   gap: 1.5rem;
+
+  button {
+    &.active {
+      ${({ theme }) => css`
+        background: ${theme.colors.GreenColorHover};
+      `}
+        box-shadow: 0 8px 12px #010409;
+    }
+
+    &:disabled {
+      cursor: no-drop;
+
+      &:hover {
+        ${({ theme }) => css`
+          background: ${theme.colors.GreenColor};
+        `}
+      }
+    }
+  }
 `;
 
 export const TasksContainer = styled.ul`
@@ -32,7 +51,6 @@ export const TasksContainer = styled.ul`
     align-items: center;
     opacity: 0;
     padding: .5rem 1rem;
-    animation: ${animationList} forwards .4s;
     ${({ theme }) => css`
       border: 1px solid ${theme.colors.BorderColor};
     `}
@@ -44,13 +62,11 @@ export const TasksContainer = styled.ul`
     span {
       display: inline-block;
     }
+  }
 
-    &.done {
-      span {
-        text-decoration: line-through;
-        color: green;
-      }
-    }
+  li, p {
+    opacity: 0;
+    animation: ${animationList} forwards .4s;
   }
 `;
 
@@ -58,4 +74,10 @@ export const TaskButtons = styled.div`
   display: flex;
   align-items: center;
   gap: .5rem;
+  opacity: 0;
+  animation: ${animationList} forwards .4s;
+`;
+
+export const NoTasks = styled.span`
+  font-weight: 500;
 `;
