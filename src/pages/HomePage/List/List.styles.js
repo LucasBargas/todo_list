@@ -27,6 +27,9 @@ export const TasksContainer = styled.ul`
   padding-top: 2rem;
 
   li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     opacity: 0;
     padding: .5rem 1rem;
     animation: ${animationList} forwards .4s;
@@ -37,5 +40,22 @@ export const TasksContainer = styled.ul`
     &:not(:last-of-type) {
       margin-bottom: .75rem;
     }
+
+    span {
+      display: inline-block;
+    }
+
+    &.done {
+      span {
+        text-decoration: line-through;
+        color: green;
+      }
+    }
   }
+`;
+
+export const TaskButtons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 `;

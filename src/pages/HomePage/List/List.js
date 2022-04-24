@@ -16,6 +16,31 @@ const List = ({ taskList, setTaskList }) => {
     return taskFilter.defaultCategory === category || taskFilter.category === category;
   });
 
+  const handleDone = ({ target }) => {
+    const [...tasks] = taskList;
+    const i = Number(target.closest('li').id);
+    setTaskList([...tasks]);
+
+    if (target.closest('li').classList.contains('done')) {
+      target.closest('li').classList.remove('done');
+      tasks[i].category = 'todo';
+    } else {
+      target.closest('li').classList.add('done');
+      tasks[i].category = 'done';
+    }
+  }
+
+  const handleDelete = ({ target }) => {
+    const [...tasks] = taskList;
+    const i = Number(target.closest('li').id);
+    tasks.splice(i, 1);
+    setTaskList([...tasks]);
+  }
+  
+  if (taskList.length) {
+    console.log(taskList);
+  }
+
   return (
     <S.ListContainer>
       <h3>Lista de Tarefas</h3>
@@ -51,15 +76,23 @@ const List = ({ taskList, setTaskList }) => {
         </Button>
       </S.ButtonsFilter>
 
-      <S.TasksContainer>
-        {filterTaskList && filterTaskList.map((task, index) => (
-          <React.Fragment key={`task ${index}`}>
-            <li id={index}>
-              {task.task}
-            </li>
-          </React.Fragment>
-        ))}
-      </S.TasksContainer>
+      {(filterTaskList || filterTaskList.length) && (
+        <S.TasksContainer>
+          {filterTaskList && filterTaskList.map((task, index) => (
+            <React.Fragment key={`task ${index}`}>
+              <li id={index}>
+                <span>{task.task}</span>
+                <S.TaskButtons>
+                  <input type="checkbox" onClick={handleDone} />
+                  <button>Editar</button>
+                  <button onClick={handleDelete}>Apagar</button>
+                </S.TaskButtons>
+              </li>
+            </React.Fragment>
+          ))}
+        </S.TasksContainer>
+      )}
+      
     </S.ListContainer>
   )
 }
