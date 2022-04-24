@@ -12,4 +12,9 @@ export const CreateTaskForm = styled.form`
   button {
     margin-top: .75rem;
   }
+
+  p {
+    margin-top: .25rem;
+    font-size: .75rem;
+  }
 `;

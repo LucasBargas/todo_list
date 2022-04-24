@@ -1,8 +1,8 @@
 import DefaultInput from './Input.styles';
 
-const Input = ({ ...props }) => {
+const Input = ({ input, ...props }) => {
   return (
-    <DefaultInput type="text" {...props} />
+    <DefaultInput ref={input} type="text" {...props} />
   )
 }
 
