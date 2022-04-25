@@ -22,12 +22,24 @@ export const ButtonsFilter = styled.div`
   display: flex;
   gap: 1.5rem;
 
+  @media (max-width: 414px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+  }
+
   button {
     &.active {
+      box-shadow: 0 8px 12px #010409;
       ${({ theme }) => css`
         background: ${theme.colors.GreenColorHover};
       `}
-        box-shadow: 0 8px 12px #010409;
+
+      @media (max-width: 380px) {
+        box-shadow: 0 12px 20px #010409;
+      }
     }
 
     &:disabled {
@@ -49,6 +61,8 @@ export const TasksContainer = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
     opacity: 0;
     padding: .5rem 1rem;
     ${({ theme }) => css`
@@ -93,6 +107,11 @@ export const HandleAllTasks = styled.div`
   padding-top: 1.75rem;
   display: flex;
   gap: 1.5rem;
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    gap: .75rem;
+  }
 `;
 
 export const DoneError = styled.p`

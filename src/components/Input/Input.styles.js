@@ -9,6 +9,13 @@ const DefaultInput = styled.input`
     background: ${theme.colors.PrimaryColor};
     color: ${theme.colors.LightColor};
   `}
+
+  &:focus {
+    ${({ theme }) => css`
+      box-shadow: 0px 0px 6px 0px ${theme.colors.GreenColor};
+      border: 1px solid ${theme.colors.GreenColor};
+    `}
+  }
 `;
 
 export default DefaultInput;

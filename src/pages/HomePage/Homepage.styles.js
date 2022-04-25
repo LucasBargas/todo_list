@@ -16,6 +16,10 @@ export const TodoListArea = styled.div`
   box-shadow: 0 8px 24px #010409;
   border-radius: 6px;
 
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
+
   h2 {
     text-align: center;
     font-size: 1.5rem;

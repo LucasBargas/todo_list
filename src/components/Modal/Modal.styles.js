@@ -21,6 +21,10 @@ export const ModalContainer = styled.section`
   left: 0;
   width: 100%;
   height: 100vh;
+
+  @media (max-width: 480px) {
+    padding: 0 1rem;
+  }
 `
 
 export const ModalArea = styled.div`
@@ -33,6 +37,10 @@ export const ModalArea = styled.div`
     background: ${theme.colors.SecondaryColor};
     border: 1px solid ${theme.colors.BorderColor};
   `}
+
+  @media (max-width: 480px) {
+    max-width: none;
+  }
 `;
 
 export const CloseModal = styled.div`
