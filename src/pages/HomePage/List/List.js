@@ -233,8 +233,24 @@ const List = ({ taskList, setTaskList }) => {
 
         {filterTaskList && (
           <S.HandleAllTasks>
-            <Button onClick={() => setDeleteDoneTasksModal(true)} width='100%' bg={Theme.colors.DarkBtnColor}>Deletar tarefas completas</Button>
-            <Button onClick={() => setDeleteAllTasksModal(true)} width='100%' bg={Theme.colors.DarkBtnColor}>Deletar todas as tarefas</Button>
+            <Button 
+              onClick={() => 
+              setDeleteDoneTasksModal(true)} 
+              width='100%' 
+              bg={Theme.colors.DarkBtnColor}
+              bgHover={Theme.colors.BorderColor}
+            >
+              Deletar tarefas completas
+            </Button>
+
+            <Button 
+              onClick={() => setDeleteAllTasksModal(true)} 
+              width='100%' 
+              bg={Theme.colors.DarkBtnColor}
+              bgHover={Theme.colors.BorderColor}
+            >
+              Deletar todas as tarefas
+            </Button>
           </S.HandleAllTasks>
         )}
       </S.TasksContainer>
@@ -282,7 +298,6 @@ const List = ({ taskList, setTaskList }) => {
           onClick={handleDeleteAllTasks}
         >
           <h4>Você irá deletar todas as suas tarefas!</h4>
-          {/* {doneErrorMsg && <S.DoneError>Sinto muito, não há tarefas completas!</S.DoneError>} */}
         </Modal>
       )}
     </S.ListContainer>

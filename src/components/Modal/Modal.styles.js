@@ -79,18 +79,6 @@ export const ModalButtons = styled.div`
   justify-content: center;
   gap: .75rem;
   padding-bottom: 1.5rem;
-
-  button#confirmButton {
-    ${({ theme }) => css`
-      background: ${theme.colors.GreenColor};
-    `}
-  }
-
-  button#cancelButton {
-    ${({ theme }) => css`
-      background: ${theme.colors.DarkBtnColor};
-    `}
-  }
 `;
 
 export const ModalQuestion = styled.div`

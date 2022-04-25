@@ -1,6 +1,6 @@
-import React from 'react';
 import * as S from './Modal.styles';
 import { IoClose } from 'react-icons/io5';
+import Theme from '../../styles/Theme';
 import Button from '../Button/Button';
 
 const Modal = ({ modificationType, task, children, onClick, handleOutsideClick, handleCloseModal }) => {
@@ -22,8 +22,25 @@ const Modal = ({ modificationType, task, children, onClick, handleOutsideClick, 
         </S.ModalQuestion>
 
         <S.ModalButtons>
-          <Button onClick={onClick} width='auto' id='confirmButton'>Confirmar</Button>
-          <Button onClick={onClick} width='auto' id='cancelButton'>Cancelar</Button>
+          <Button 
+            onClick={onClick} 
+            width='auto' 
+            id='confirmButton'
+            bgHover={Theme.colors.GreenColorHover}
+            bg={Theme.colors.GreenColor}
+          >
+            Confirmar
+          </Button>
+
+          <Button 
+            onClick={onClick} 
+            width='auto' 
+            id='cancelButton'
+            bgHover={Theme.colors.BorderColor}
+            bg={Theme.colors.DarkBtnColor}
+          >
+            Cancelar
+          </Button>
         </S.ModalButtons>
       </S.ModalArea>
     </S.ModalContainer>

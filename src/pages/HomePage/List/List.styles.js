@@ -92,7 +92,7 @@ export const NoTasks = styled.span`
 export const HandleAllTasks = styled.div`
   padding-top: 1.75rem;
   display: flex;
-  gap: 1.5rem
+  gap: 1.5rem;
 `;
 
 export const DoneError = styled.p`
