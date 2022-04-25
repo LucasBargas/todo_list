@@ -4,7 +4,14 @@ import CreateTask from './CreateTask/CreateTask';
 import List from './List/List';
 
 const Homepage = () => {
-  const [taskList, setTaskList] = useState([]);
+  const defaulTasks = [
+    { task: 'Estudar Tailwind', defaultCategory: 'all', category: 'todo' },
+    { task: 'Estudar Bootstrap5', defaultCategory: 'all', category: 'todo' },
+    { task: 'Estudar TypeScript', defaultCategory: 'all', category: 'todo' },
+    { task: 'Estudar NodeJS', defaultCategory: 'all', category: 'todo' },
+  ];
+
+  const [taskList, setTaskList] = useState([...defaulTasks]);
 
   return (
     <S.TodoListContainer>

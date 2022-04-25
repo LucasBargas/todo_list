@@ -144,6 +144,7 @@ const List = ({ taskList, setTaskList }) => {
       setEditModal(null);
       setDeleteDoneTasksModal(null);
       setDeleteAllTasksModal(null);
+      setDoneErrorMsg(false);
     }
   }
 
@@ -152,6 +153,7 @@ const List = ({ taskList, setTaskList }) => {
     setEditModal(null);
     setDeleteDoneTasksModal(null);
     setDeleteAllTasksModal(null);
+    setDoneErrorMsg(false);
   }
 
   return (
