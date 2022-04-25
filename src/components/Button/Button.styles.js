@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const DefaultButton = styled.button`
   display: block;
@@ -10,9 +10,7 @@ const DefaultButton = styled.button`
   transition: .2s;
   border-radius: 4px;
   box-shadow: transparent 0px 0px, transparent 0px 0px;
-  ${({ theme }) => css`
-    color: ${theme.colors.LightColor};
-  `}
+  color: ${({ theme }) => theme.colors.LightColor};
 
   &:hover {
     background: ${({ bgHover }) => bgHover};

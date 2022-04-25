@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const animationList = keyframes`
   to {
@@ -11,9 +11,7 @@ export const ListContainer = styled.div`
 
   h3 {
     text-align: center;
-    ${({ theme }) => css`
-      color: ${theme.colors.LightColor};
-    `}
+    color: ${({ theme }) => theme.colors.LightColor};
   }
 `;
 
@@ -33,9 +31,7 @@ export const ButtonsFilter = styled.div`
   button {
     &.active {
       box-shadow: 0 8px 12px #010409;
-      ${({ theme }) => css`
-        background: ${theme.colors.GreenColorHover};
-      `}
+      background: ${({ theme }) => theme.colors.GreenColorHover};
 
       @media (max-width: 380px) {
         box-shadow: 0 12px 20px #010409;
@@ -46,9 +42,7 @@ export const ButtonsFilter = styled.div`
       cursor: no-drop;
 
       &:hover {
-        ${({ theme }) => css`
-          background: ${theme.colors.GreenColor};
-        `}
+        background: ${({ theme }) => theme.colors.GreenColor};
       }
     }
   }
@@ -65,16 +59,18 @@ export const TasksContainer = styled.ul`
     gap: .5rem;
     opacity: 0;
     padding: .5rem 1rem;
-    ${({ theme }) => css`
-      border: 1px solid ${theme.colors.BorderColor};
-    `}
+    border: 1px solid ${({ theme }) => theme.colors.BorderColor};
 
     &:not(:last-of-type) {
       margin-bottom: .75rem;
     }
 
-    span {
+    span, input {
       display: inline-block;
+    }
+
+    input {
+      margin: 0 .5rem;
     }
   }
 
@@ -87,15 +83,13 @@ export const TasksContainer = styled.ul`
 export const TaskButtons = styled.div`
   display: flex;
   align-items: center;
-  gap: .5rem;
   opacity: 0;
   animation: ${animationList} forwards .4s;
 
   button {
     background: transparent;
-    ${({ theme }) => css`
-      color: ${theme.colors.GreenColor};
-    `}
+    padding: .5rem .5rem;
+    color: ${({ theme }) => theme.colors.GreenColor};
   }
 `;
 

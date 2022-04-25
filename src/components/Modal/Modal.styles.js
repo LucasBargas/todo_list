@@ -1,11 +1,11 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const modalAnimation = keyframes`
-  from{
+  from {
     opacity: 0;
     transform: translateY(-50px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -33,10 +33,8 @@ export const ModalArea = styled.div`
   box-shadow: 0 8px 24px #010409;
   border-radius: 6px;
   animation: ${modalAnimation} .4s forwards;
-  ${({ theme }) => css`
-    background: ${theme.colors.SecondaryColor};
-    border: 1px solid ${theme.colors.BorderColor};
-  `}
+  background: ${({ theme }) => theme.colors.SecondaryColor};
+  border: 1px solid ${({ theme }) => theme.colors.BorderColor};
 
   @media (max-width: 480px) {
     max-width: none;
@@ -56,9 +54,7 @@ export const CloseModal = styled.div`
     width: 40px;
     font-size: 1.5rem;
     background: transparent;
-    ${({ theme }) => css`
-      color: ${theme.colors.LightColor};
-    `}
+    color: ${({ theme }) => theme.colors.LightColor};
   }
 `;
 

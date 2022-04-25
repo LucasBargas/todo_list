@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -14,18 +14,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    ${({ theme }) => css`
-      background: ${theme.colors.PrimaryColor};
-      color: ${theme.colors.LightColor};
-      font-family: ${theme.fonts.Roboto};
-    `}
+    background: ${({ theme }) => theme.colors.PrimaryColor};
+    color: ${({ theme }) => theme.colors.LightColor};
+    font-family: ${({ theme }) => theme.fonts.Roboto};
 
     button, input {
       outline: none;
       border: none;
-      ${({ theme }) => css`
-      font-family: ${theme.fonts.Roboto};
-    `}
+      font-family: ${({ theme }) => theme.fonts.Roboto};
     }
 
     button {
