@@ -17,7 +17,7 @@ const CreateTask = ({ taskList, setTaskList }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (task) {
-      setTaskList([...taskList, { task, defaultCategory: 'all', category: 'todo' }]);
+      setTaskList([{ task, defaultCategory: 'all', category: 'todo' }, ...taskList]);
       setTask('');
     }
     if (task === '') setErrorMsg(true);

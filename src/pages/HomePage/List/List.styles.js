@@ -76,8 +76,26 @@ export const TaskButtons = styled.div`
   gap: .5rem;
   opacity: 0;
   animation: ${animationList} forwards .4s;
+
+  button {
+    background: transparent;
+    ${({ theme }) => css`
+      color: ${theme.colors.GreenColor};
+    `}
+  }
 `;
 
 export const NoTasks = styled.span`
   font-weight: 500;
+`;
+
+export const HandleAllTasks = styled.div`
+  padding-top: 1.75rem;
+  display: flex;
+  gap: 1.5rem
+`;
+
+export const DoneError = styled.p`
+  font-size: .875rem;
+  font-family: 500;
 `;
