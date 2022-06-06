@@ -7,14 +7,23 @@ const CreatorInfosContainer = styled.section`
   p {
     letter-spacing: 1px;
     font-weight: normal;
-    
-    span, a {
+  }
+
+  span, a {
       font-weight: bold;
       color: ${({ theme }) => theme.colors.GreenColor};
-    }
+  }
   
-    a {
-      text-decoration: none;
+  a {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-of-type {
+      margin-top: .25rem;
     }
   }
 `;
