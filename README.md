@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://listadetarefas.projetoslucasbargas.com/>
+<https://listadetarefas-lucasbargas.vercel.app/>
 
 ### Por que desenvolvi esta aplicação
 Desenvolvi esta lista de tarefas para exercitar ainda mais minha lógica e meus conhecimentos em ReactJS.
