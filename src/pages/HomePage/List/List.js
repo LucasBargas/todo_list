@@ -51,12 +51,11 @@ const List = ({ taskList, setTaskList }) => {
    }
   }
 
-  const handleDelete = ({ target }) => {
+  const handleDelete = (index) => {
     const [...tasks] = taskList;
-    const i = Number(target.closest('li').id);
-    setTask(tasks[i].task)
+    setTask(tasks[index].task)
     setModificationType('apagando');
-    setTaskIndice(i);
+    setTaskIndice(index);
     setTaskList([...tasks]);
     setDeleteModal(true);
   }
@@ -129,7 +128,7 @@ const List = ({ taskList, setTaskList }) => {
   const handleDeleteAllTasks = ({ target }) => {
     if (target.id === 'confirmButton') {
       setTaskList([]);
-
+      localStorage.removeItem('list');
       setTimeout(() => {
         setDeleteAllTasksModal(null);
       }, 200);
@@ -216,7 +215,7 @@ const List = ({ taskList, setTaskList }) => {
                   </button>
                   <button 
                     title='Apagar tarefa'
-                    onClick={handleDelete}
+                    onClick={() => handleDelete(index)}
                   >
                      <IoTrashBinSharp />
                   </button>

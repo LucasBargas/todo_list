@@ -1,19 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './Homepage.styles';
 import CreateTask from './CreateTask/CreateTask';
 import List from './List/List';
 import CreatorInfos from '../../components/CreatorInfos/CreatorInfos';
 
 const Homepage = () => {
-  const defaulTasks = [
-    { task: 'Estudar TailwindCSS', defaultCategory: 'all', category: 'todo' },
-    { task: 'Estudar Bootstrap5', defaultCategory: 'all', category: 'todo' },
-    { task: 'Estudar NextJS', defaultCategory: 'all', category: 'todo' },
-    { task: 'Estudar TypeScript', defaultCategory: 'all', category: 'todo' },
-    { task: 'Estudar NodeJS', defaultCategory: 'all', category: 'todo' },
-  ];
+  const [taskList, setTaskList] = useState([]);
 
-  const [taskList, setTaskList] = useState([...defaulTasks]);
+  useEffect(() => {
+    if (taskList.length > 0) {
+      localStorage.setItem('list', JSON.stringify(taskList));
+    }
+  }, [taskList]);
+
+  useEffect(() => {
+    if (
+      localStorage.getItem('list') &&
+      localStorage.getItem('list').length > 0
+    ) {
+      setTaskList(JSON.parse(localStorage.getItem('list')));
+    }
+  }, []);
 
   return (
     <S.TodoListContainer>
