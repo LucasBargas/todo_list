@@ -1,17 +1,17 @@
 const Theme = {
   colors: {
-    PrimaryColor: '#0d1017',
-    SecondaryColor: '#161b21',
-    DarkBtnColor: '#21262d',
-    BorderColor: '#30363d',
-    GreenColor: '#238636',
-    GreenColorHover: '#26a641',
-    LightColor: '#ffffff'
+    primaryColor: '#0d1017',
+    secondaryColor: '#161b21',
+    darkBtnColor: '#21262d',
+    borderColor: '#30363d',
+    greenColor: '#238636',
+    greenColorHover: '#26a641',
+    lightColor: '#ffffff',
   },
 
   fonts: {
-    Roboto: 'Roboto, sans-serif'
-  }
-}
+    roboto: 'Roboto, sans-serif',
+  },
+};
 
 export default Theme;

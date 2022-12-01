@@ -8,28 +8,35 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    @media (max-width: 375px) {
+    @media (max-width: 480px) {
       font-size: 14px;
     }
   }
 
   body {
-    background: ${({ theme }) => theme.colors.PrimaryColor};
-    color: ${({ theme }) => theme.colors.LightColor};
-    font-family: ${({ theme }) => theme.fonts.Roboto};
+    background: ${({ theme }) => theme.colors.primaryColor};
+    color: ${({ theme }) => theme.colors.lightColor};
+    font-family: ${({ theme }) => theme.fonts.roboto};
+    letter-spacing: 1px;
 
     button, input {
       outline: none;
       border: none;
-      font-family: ${({ theme }) => theme.fonts.Roboto};
+      font-family: ${({ theme }) => theme.fonts.roboto};
+      letter-spacing: 1px;
     }
 
     button {
       cursor: pointer;
+      font-weight: 500;
     }
 
     ul, li {
       list-style: none;
+    }
+
+    svg, span {
+      display: block;
     }
   }
 `;
