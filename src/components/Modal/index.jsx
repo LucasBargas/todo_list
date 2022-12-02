@@ -18,6 +18,8 @@ const Modal = ({
   const [editInputError, setEditInputError] = useState(false);
   const inputRef = useRef();
 
+  console.log(modalAction);
+
   const handleClick = ({ target, currentTarget }) => {
     if (target === currentTarget) {
       setModal(false);
@@ -116,7 +118,9 @@ const Modal = ({
             <h2>Você irá deletar todas as suas tarefas!</h2>
           )}
 
-          {task && <p>{`"${task}"`}</p>}
+          {task &&
+            modalAction !== 'deleteAll' &&
+            modalAction !== 'deleteDone' && <p>{`"${task}"`}</p>}
 
           {modalAction && modalAction === 'edit' && (
             <S.ModalEdit>
