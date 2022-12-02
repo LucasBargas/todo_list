@@ -14,7 +14,7 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
     setErrorMsg(false);
   };
 
-  const handleVerifyTask = () => {
+  const handleTaskVerification = () => {
     let isValid = true;
 
     const taskListCopy = taskList.map((el) => el.task);
@@ -31,7 +31,7 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
       return;
     }
 
-    if (!handleVerifyTask()) {
+    if (!handleTaskVerification()) {
       setErrorMsg('Você já cadastrou esta tarefa.');
       return;
     }
