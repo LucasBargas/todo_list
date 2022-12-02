@@ -24,4 +24,5 @@ O projeto **Todo List** foi desenvolvido por mim, Lucas Bargas, com base em um l
 <img alt="Página inicial - com tarefas registradas" src="https://i.ibb.co/S0m1ntj/home-tasks.png">
 <img alt="Página inicial - Modal de edição de uma tarefa específica" src="https://i.ibb.co/BtTG4FK/modal-edit-one.png">
 <img alt="Página inicial - Modal de exclusão de uma tarefa específica" src="https://i.ibb.co/5BXVN63/modal-delete-one.png">
-<img alt="Página inicial - Modal de exclusão de todas as tarefas" src="https://i.ibb.co/5BXVN63/modal-delete-one.png">
+<img alt="Página inicial - Modal de exclusão de todas as tarefas" src="https://i.ibb.co/5TWCNVN/modal-delete-all.png">
+<img alt="Página inicial - Modal de exclusão de tarefas completas" src="https://i.ibb.co/qRQ4JS6/modal-delete-all-done.png">
