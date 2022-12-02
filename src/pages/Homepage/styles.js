@@ -5,7 +5,7 @@ const HomepageContainer = styled.section`
   align-items: center;
   justify-content: center;
   min-height: calc(100vh + 2rem);
-  padding: 1rem;
+  padding: 2rem;
 
   @media(max-width: 480px) {
     align-items: flex-start;
