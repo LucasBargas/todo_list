@@ -19,7 +19,7 @@ O projeto **Todo List** foi desenvolvido por mim, Lucas Bargas, com base em um l
 * LocalStorage;
 * React Icons.
 
-### Print do App (Versão Desktop)
+### Prints do App (Versão Desktop)
 <img alt="Página inicial - sem tarefas registradas" src="https://i.ibb.co/DfnsmQT/home.png">
 <img alt="Página inicial - com tarefas registradas" src="https://i.ibb.co/S0m1ntj/home-tasks.png">
 <img alt="Página inicial - Modal de edição de uma tarefa específica" src="https://i.ibb.co/BtTG4FK/modal-edit-one.png">
