@@ -32,7 +32,7 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
     }
 
     if (!handleTaskVerification()) {
-      setErrorMsg('Você já cadastrou esta tarefa.');
+      setErrorMsg('Você já cadastrou uma tarefa com este tema.');
       return;
     }
 
