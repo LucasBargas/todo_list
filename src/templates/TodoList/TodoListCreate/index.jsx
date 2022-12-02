@@ -14,11 +14,25 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
     setErrorMsg(false);
   };
 
+  const handleVerifyTask = () => {
+    let isValid = true;
+
+    const taskListCopy = taskList.map((el) => el.task);
+    if (taskListCopy.includes(task)) isValid = false;
+
+    return isValid;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (task === '') {
       setErrorMsg('Você precisa digitar uma tarefa.');
+      return;
+    }
+
+    if (!handleVerifyTask()) {
+      setErrorMsg('Você já cadastrou esta tarefa.');
       return;
     }
 

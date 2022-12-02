@@ -18,8 +18,6 @@ const Modal = ({
   const [editInputError, setEditInputError] = useState(false);
   const inputRef = useRef();
 
-  console.log(modalAction);
-
   const handleClick = ({ target, currentTarget }) => {
     if (target === currentTarget) {
       setModal(false);
@@ -44,7 +42,7 @@ const Modal = ({
     setTaskList(taskListCopy);
   };
 
-  const deleteAllDoneTasks = () => {
+  const handleDeleteAllDoneTasks = () => {
     setTaskList(taskList.filter((el) => el.category !== 'done'));
     setChecked([]);
     localStorage.removeItem('taskListDone');
@@ -81,7 +79,7 @@ const Modal = ({
       setModal(false);
     }
 
-    if (modalAction === 'deleteDone') deleteAllDoneTasks();
+    if (modalAction === 'deleteDone') handleDeleteAllDoneTasks();
 
     if (modalAction === 'deleteAll') handleDeleteAllTasks();
 
