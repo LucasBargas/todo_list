@@ -24,6 +24,11 @@ const Modal = ({
     }
   };
 
+  const handleEditInputChange = ({ target }) => {
+    setEditInputValue(target.value);
+    setEditInputError(false);
+  };
+
   const handleTaskEdition = () => {
     if (editInputValue.length === 0) {
       setEditInputError('Você não realizou nenhuma edição.');
@@ -37,6 +42,7 @@ const Modal = ({
       if (
         el.id === taskId &&
         editInputValue.length > 0 &&
+        el.task !== editInputValue &&
         taskListOnlyThemes.includes(editInputValue)
       ) {
         setEditInputError('Você já cadastrou uma tarefa com este tema.');
@@ -137,7 +143,7 @@ const Modal = ({
                 placeholder="Altere aqui sua Tarefa..."
                 errorMsg={editInputError}
                 value={editInputValue}
-                onChange={({ target }) => setEditInputValue(target.value)}
+                onChange={handleEditInputChange}
                 onKeyPress={handleOnKeyPress}
               />
             </S.ModalEdit>
