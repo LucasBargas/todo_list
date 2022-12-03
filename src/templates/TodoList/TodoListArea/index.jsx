@@ -5,7 +5,7 @@ import * as S from './styles';
 import Button from '../../../components/Button';
 import Theme from '../../../styles/Theme';
 
-const TodoListArea = ({ taskList, setTaskList, action, setAction }) => {
+const TodoListArea = ({ taskList, setTaskList, action }) => {
   const [modal, setModal] = useState(false);
   const [taskRef, setTaskRef] = useState(undefined);
   const [modalAction, setModalAction] = useState(undefined);

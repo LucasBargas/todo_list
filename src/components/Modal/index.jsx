@@ -88,6 +88,7 @@ const Modal = ({
   const handleConfirmButton = () => {
     if (modalAction === 'delete' && taskList.length === 1) {
       localStorage.removeItem('taskList');
+      localStorage.removeItem('taskListDone');
     }
 
     if (modalAction === 'delete' && taskId) {
