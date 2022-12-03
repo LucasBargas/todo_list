@@ -14,7 +14,7 @@ const Modal = ({
   taskId,
   setChecked,
 }) => {
-  const [editInputValue, setEditInputValue] = useState('');
+  const [editInputValue, setEditInputValue] = useState('' || task);
   const [editInputError, setEditInputError] = useState(false);
   const inputRef = useRef();
 
