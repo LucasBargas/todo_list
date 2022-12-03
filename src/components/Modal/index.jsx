@@ -35,6 +35,7 @@ const Modal = ({
 
     taskListCopy.forEach((el) => {
       if (
+        el.id === taskId &&
         editInputValue.length > 0 &&
         taskListOnlyThemes.includes(editInputValue)
       ) {
