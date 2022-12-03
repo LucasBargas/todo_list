@@ -31,8 +31,17 @@ const Modal = ({
     }
 
     const taskListCopy = taskList.map((el) => el);
+    const taskListOnlyThemes = taskList.map((el) => el.task);
 
     taskListCopy.forEach((el) => {
+      if (
+        editInputValue.length > 0 &&
+        taskListOnlyThemes.includes(editInputValue)
+      ) {
+        setEditInputError('Você já cadastrou uma tarefa com este tema.');
+        return;
+      }
+
       if (el.id === taskId && editInputValue.length > 0) {
         el.task = editInputValue;
         setModal(false);
