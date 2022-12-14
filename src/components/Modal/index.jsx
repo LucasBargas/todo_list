@@ -38,6 +38,7 @@ const Modal = ({
 
     const taskListCopy = taskList.map((el) => el);
     const taskListOnlyThemes = taskList.map((el) => el.task);
+    const checkedListCopy = checked.map((el) => el);
 
     taskListCopy.forEach((el) => {
       if (
@@ -56,7 +57,25 @@ const Modal = ({
       }
     });
 
+    checkedListCopy.forEach((el) => {
+      if (
+        el.id === taskId &&
+        editInputValue.length > 0 &&
+        el.task !== editInputValue &&
+        taskListOnlyThemes.includes(editInputValue)
+      ) {
+        setEditInputError('Você já cadastrou uma tarefa com este tema.');
+        return;
+      }
+
+      if (el.id === taskId && editInputValue.length > 0) {
+        el.task = editInputValue;
+        setModal(false);
+      }
+    });
+
     setTaskList(taskListCopy);
+    setChecked(checkedListCopy);
   };
 
   const handleDeleteAllDoneTasks = () => {
