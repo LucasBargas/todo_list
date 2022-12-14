@@ -28,12 +28,12 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
 
   const handleChangeDone = (target, id) => {
     if (target.checked) {
-      setChecked([...checked, target.value]);
+      setChecked([...checked, { id, task: target.value }]);
       target.closest('ul').previousElementSibling.classList.add('done');
     }
 
     if (!target.checked) {
-      setChecked(checked.filter((el) => el !== target.value));
+      setChecked(checked.filter((el) => el.id !== id));
       target.closest('ul').previousElementSibling.classList.remove('done');
     }
 
@@ -96,7 +96,7 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
                   <input
                     value={task.task}
                     type="checkbox"
-                    checked={checked.includes(task.task)}
+                    checked={checked.some((el) => el.id === task.id)}
                     onChange={({ target }) => handleChangeDone(target, task.id)}
                     title="Completar tarefa"
                   />
@@ -158,6 +158,7 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
           taskList={taskList}
           taskId={taskId}
           setChecked={setChecked}
+          checked={checked}
         />
       )}
     </S.TodoListAreaContainer>

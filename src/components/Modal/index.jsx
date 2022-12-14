@@ -13,6 +13,7 @@ const Modal = ({
   taskList,
   taskId,
   setChecked,
+  checked,
 }) => {
   const [editInputValue, setEditInputValue] = useState('' || task);
   const [editInputError, setEditInputError] = useState(false);
@@ -93,6 +94,7 @@ const Modal = ({
 
     if (modalAction === 'delete' && taskId) {
       setTaskList(taskList.filter((el) => el.id !== taskId));
+      setChecked(checked.filter((el) => el.id !== taskId));
       setModal(false);
     }
 
