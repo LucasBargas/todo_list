@@ -29,12 +29,10 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
   const handleChangeDone = (target, id) => {
     if (target.checked) {
       setChecked([...checked, { id, task: target.value }]);
-      // target.closest('ul').previousElementSibling.classList.add('done');
     }
 
     if (!target.checked) {
       setChecked(checked.filter((el) => el.id !== id));
-      // target.closest('ul').previousElementSibling.classList.remove('done');
     }
 
     if (checked.length === 1) {
