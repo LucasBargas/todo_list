@@ -29,12 +29,12 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
   const handleChangeDone = (target, id) => {
     if (target.checked) {
       setChecked([...checked, { id, task: target.value }]);
-      target.closest('ul').previousElementSibling.classList.add('done');
+      // target.closest('ul').previousElementSibling.classList.add('done');
     }
 
     if (!target.checked) {
       setChecked(checked.filter((el) => el.id !== id));
-      target.closest('ul').previousElementSibling.classList.remove('done');
+      // target.closest('ul').previousElementSibling.classList.remove('done');
     }
 
     if (checked.length === 1) {
@@ -88,7 +88,11 @@ const TodoListArea = ({ taskList, setTaskList, action }) => {
         <S.TodoListAreaWrapper>
           {taskListFiltered.map((task) => (
             <li key={task.id}>
-              <span className={checked.includes(task.task) ? 'done' : ''}>
+              <span
+                className={
+                  checked.some((el) => el.id === task.id) ? 'done' : ''
+                }
+              >
                 {task.task}
               </span>
               <S.TodoListAreaActions>
