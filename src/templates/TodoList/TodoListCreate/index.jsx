@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import * as S from './styles';
 import Theme from '../../../styles/Theme';
 import Input from '../../../components/Input';
@@ -38,7 +39,7 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
 
     setTaskList([
       {
-        id: Date.now() + String(Math.floor(Math.random() * 1000)),
+        id: uuidv4(),
         task,
         defaultCategory: 'all',
         category: 'todo',
@@ -47,6 +48,8 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
     ]);
     setTask('');
   };
+
+  console.log(task);
 
   return (
     <S.TodoListCreateContainer>
