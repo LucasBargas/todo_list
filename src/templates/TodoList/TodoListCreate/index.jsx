@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as S from './styles';
 import Theme from '../../../styles/Theme';
 import Input from '../../../components/Input';
@@ -26,7 +26,7 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (task === '') {
+    if (!task.trim()) {
       setErrorMsg('Você precisa digitar uma tarefa.');
       return;
     }
@@ -36,23 +36,17 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
       return;
     }
 
-    if (task.length > 0) {
-      setTaskList([
-        {
-          id: Date.now() + String(Math.floor(Math.random() * 1000)),
-          task,
-          defaultCategory: 'all',
-          category: 'todo',
-        },
-        ...taskList,
-      ]);
-      setTask('');
-    }
+    setTaskList([
+      {
+        id: Date.now() + String(Math.floor(Math.random() * 1000)),
+        task,
+        defaultCategory: 'all',
+        category: 'todo',
+      },
+      ...taskList,
+    ]);
+    setTask('');
   };
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
 
   return (
     <S.TodoListCreateContainer>
