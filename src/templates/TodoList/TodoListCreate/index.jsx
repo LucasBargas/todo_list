@@ -49,8 +49,6 @@ const TodoListCreate = ({ taskList, setTaskList }) => {
     setTask('');
   };
 
-  console.log(task);
-
   return (
     <S.TodoListCreateContainer>
       <S.TodoListCreateForm onSubmit={handleSubmit}>
